@@ -13,12 +13,7 @@ export function useOpenExternalUrl() {
   const openExternalUrl = useCallback(
     async (url: string): Promise<void> => {
       if (isDesktop) {
-        // Tauri 桌面端：本地后端地址（歌曲组件设置等）直接在窗口内整页跳转，避免 opener 打不开
-        if (url.startsWith("http://localhost:9863") || url.startsWith("http://127.0.0.1:9863")) {
-          window.location.href = url;
-          return;
-        }
-        // Tauri 桌面端：外部链接用系统默认浏览器打开
+        // Tauri 桌面端：用系统默认浏览器打开（作者原版行为）。本地站点同样交给浏览器渲染，避免 WebView 内空白。
         try {
           const { openUrl } = await import("@tauri-apps/plugin-opener");
           await openUrl(url);
