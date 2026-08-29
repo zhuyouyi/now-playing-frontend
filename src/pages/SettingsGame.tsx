@@ -118,7 +118,7 @@ export default function GameSettingsPage() {
 
         <Alert
           variant="faded"
-          description="在 OBS 中显示当前正在游玩的游戏。Steam 用注册表自动识别，其它平台用进程检测。"
+          description="在 OBS 中显示当前正在游玩的游戏。Steam 走注册表，其它平台自动识别进程；识别不到时可手动补充进程映射。"
         />
 
         <Card>
@@ -126,8 +126,17 @@ export default function GameSettingsPage() {
             <div className="flex flex-col">
               <p className="text-md font-semibold">当前状态</p>
               <p className="text-small text-default-500">
-                {game && game.running ? `${game.platformLabel ?? ""} · ${game.name}` : "未在游玩"}
+                {game && game.running
+                  ? `${game.platformLabel ?? ""} · ${game.name}${
+                      game.processName ? `（进程：${game.processName}）` : ""
+                    }`
+                  : "未在游玩"}
               </p>
+              {game && game.running && game.source && (
+                <p className="text-tiny text-default-400">
+                  来源：{game.source}
+                </p>
+              )}
             </div>
           </CardHeader>
           <CardBody>
@@ -226,7 +235,7 @@ export default function GameSettingsPage() {
           </CardHeader>
           <CardBody className="flex flex-col gap-3">
             <p className="text-small text-default-500">
-              每行一个：进程名|显示名|平台（epic / gog / ubisoft / custom）。可省略 .exe。
+              默认会自动识别游戏进程。若某个游戏识别不到，可在此手动补充：每行一个「进程名|显示名|平台」，可省略 .exe。
             </p>
             <Textarea
               minRows={6}
