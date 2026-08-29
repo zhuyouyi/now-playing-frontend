@@ -25,6 +25,7 @@ const PlayerPage = lazy(() => import("@/pages/Player"));
 const ApiPage = lazy(() => import("@/pages/Api"));
 const WidgetPage = lazy(() => import("@/pages/Widget"));
 const PlayerSettingsPage = lazy(() => import("@/pages/SettingsPlayer"));
+const GameSettingsPage = lazy(() => import("@/pages/SettingsGame"));
 const MarkdownEditorPage = lazy(() => import("@/pages/MarkdownEditor"));
 const PageDeploymentExtensionPage = lazy(() => import("@/pages/ExtensionPageDeployment"));
 
@@ -60,6 +61,7 @@ function App() {
             <Route element={<GeneralSettingsPage />} path="/settings/general" />
             <Route element={<LyricSettingsPage />} path="/settings/lyric" />
             <Route element={<PlayerSettingsPage />} path="/settings/player" />
+            <Route element={<GameSettingsPage />} path="/settings/game" />
             <Route element={<DesktopSettingsPage />} path="/settings/desktop" />
             <Route element={<CameraSettingsPage />} path="/settings/camera" />
             <Route element={<OutputSettingsPage />} path="/settings/output" />

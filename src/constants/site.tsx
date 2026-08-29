@@ -10,7 +10,7 @@ import {
   Grid,
   ArrowUpRight
 } from "@mynaui/icons-react";
-import { ListMusic } from "lucide-react";
+import { ListMusic, Gamepad2 } from "lucide-react";
 
 import { NavItem } from "@/types/nav";
 import { CameraIcon, SettingsIcon } from "@/components/Icons";
@@ -58,6 +58,12 @@ export const siteConfig = {
       label: "桌面组件",
       icon: <Monitor size={24} />,
       href: "/settings/desktop",
+    },
+    {
+      key: "game",
+      label: "游戏组件",
+      icon: <Gamepad2 size={24} />,
+      href: "/settings/game",
     },
     {
       key: "camera",

@@ -1,0 +1,30 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Now Playing desktop window capabilities",
+  "windows": ["main"],
+  "remote": {
+    "urls": ["http://localhost:9863"]
+  },
+  "permissions": [
+    "core:default",
+    "core:window:allow-start-dragging",
+    "core:window:allow-toggle-maximize",
+    "core:window:allow-is-maximized",
+    "core:window:allow-is-fullscreen",
+    "core:window:allow-inner-size",
+    "core:window:allow-outer-size",
+    "core:window:allow-scale-factor",
+    "core:window:allow-current-monitor",
+    "core:window:allow-available-monitors",
+    "core:window:allow-primary-monitor",
+    "core:window:allow-set-size",
+    "core:window:allow-set-position",
+    "core:window:allow-minimize",
+    "core:window:allow-maximize",
+    "core:window:allow-unmaximize",
+    "core:window:allow-close",
+    "core:window:allow-start-resize-dragging",
+    "shell:allow-open"
+  ]
+}
