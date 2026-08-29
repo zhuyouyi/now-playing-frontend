@@ -24,6 +24,7 @@ const LyricPage = lazy(() => import("@/pages/Lyric"));
 const PlayerPage = lazy(() => import("@/pages/Player"));
 const ApiPage = lazy(() => import("@/pages/Api"));
 const WidgetPage = lazy(() => import("@/pages/Widget"));
+const SongWidgetSettingsPage = lazy(() => import("@/pages/SettingsSongWidget"));
 const PlayerSettingsPage = lazy(() => import("@/pages/SettingsPlayer"));
 const GameSettingsPage = lazy(() => import("@/pages/SettingsGame"));
 const MarkdownEditorPage = lazy(() => import("@/pages/MarkdownEditor"));
@@ -62,6 +63,7 @@ function App() {
             <Route element={<LyricSettingsPage />} path="/settings/lyric" />
             <Route element={<PlayerSettingsPage />} path="/settings/player" />
             <Route element={<GameSettingsPage />} path="/settings/game" />
+            <Route element={<SongWidgetSettingsPage />} path="/settings/widget" />
             <Route element={<DesktopSettingsPage />} path="/settings/desktop" />
             <Route element={<CameraSettingsPage />} path="/settings/camera" />
             <Route element={<OutputSettingsPage />} path="/settings/output" />
