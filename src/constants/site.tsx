@@ -7,7 +7,6 @@ import {
   InfoCircle,
   Api,
   Grid,
-  ArrowUpRight
 } from "@mynaui/icons-react";
 import { ListMusic, Gamepad2 } from "lucide-react";
 
@@ -36,9 +35,7 @@ export const siteConfig = {
       key: "widget",
       label: "歌曲组件",
       icon: <Music size={24} />,
-      href: "http://localhost:9863/settings/widget",
-      external: true,
-      endContent: <ArrowUpRight size={22} color="#a1a1aa" />,
+      href: "/widgetDesktop",
     },
     {
       key: "lyric",
