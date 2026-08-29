@@ -26,4 +26,6 @@ export interface Game {
   sessionSeconds: number;
   playtimeMinutes?: number;
   source: string;
+  processName?: string;
+  detectedName?: string;
 }
