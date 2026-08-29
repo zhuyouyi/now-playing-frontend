@@ -77,7 +77,7 @@ pub fn run() {
                     "restart" => {
                         // 重新启动：杀掉后端再拉起，并等待就绪
                         kill_backend(app);
-                        let handle = app.handle().clone();
+                        let handle = app.clone();
                         if let Some(w) = app.get_webview_window("main") {
                             let _ = w.show();
                         }
