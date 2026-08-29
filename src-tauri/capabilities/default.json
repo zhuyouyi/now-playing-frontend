@@ -1,10 +1,10 @@
 {
   "$schema": "../gen/schemas/desktop-schema.json",
   "identifier": "default",
-  "description": "Now Playing desktop window capabilities",
+  "description": "Now Playing window + webview permissions",
   "windows": ["main"],
   "remote": {
-    "urls": ["http://localhost:9863"]
+    "urls": ["http://localhost:9863/**"]
   },
   "permissions": [
     "core:default",
@@ -20,13 +20,15 @@
     "core:window:allow-primary-monitor",
     "core:window:allow-set-size",
     "core:window:allow-set-position",
+    "core:window:allow-set-focus",
     "core:window:allow-minimize",
     "core:window:allow-maximize",
     "core:window:allow-unmaximize",
     "core:window:allow-close",
     "core:window:allow-start-resize-dragging",
-    "shell:allow-open",
     "opener:default",
+    "opener:allow-open-url",
+    "shell:allow-open",
     "dialog:default"
   ]
 }
