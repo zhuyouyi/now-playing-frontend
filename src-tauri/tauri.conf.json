@@ -25,14 +25,7 @@
       }
     ],
     "security": {
-      "csp": null,
-      "dangerousRemoteDomainIpcAccess": [
-        {
-          "domain": "http://localhost:9863",
-          "windows": ["main"],
-          "plugins": ["shell", "dialog", "opener", "window"]
-        }
-      ]
+      "csp": null
     }
   },
   "bundle": {
@@ -44,11 +37,6 @@
       "icons/128x128.png",
       "icons/icon.ico"
     ],
-    "windows": {
-      "nsis": {
-        "installMode": "perUser",
-        "displayLanguageSelector": true
-      }
-    }
+    "windows": {}
   }
 }
