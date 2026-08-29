@@ -4,7 +4,6 @@ import {
   MusicCircle,
   Monitor,
   ExternalLink,
-  Heart,
   InfoCircle,
   Api,
   Grid,
@@ -88,13 +87,6 @@ export const siteConfig = {
       label: "扩展功能",
       icon: <Grid size={24} />,
       href: "/extension",
-    },
-    {
-      key: "sponsor",
-      label: "赞助",
-      icon: <Heart size={24} />,
-      href: "/sponsor",
-      position: "bottom",
     },
     {
       key: "about",
