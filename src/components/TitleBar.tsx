@@ -108,7 +108,8 @@ export const TitleBar: React.FC<TitleBarProps> = ({
           }
           break;
         case "close":
-          await appWindow.destroy();
+          // 点叉 → 触发窗口“关闭请求”，由 Tauri 守护进程拦截并最小化到托盘（不退出）
+          await appWindow.close();
           break;
       }
     } catch (error) {
